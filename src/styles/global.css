@@ -1,0 +1,146 @@
+/* Import Montserrat from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+/* Optionally remove or comment out VCR font-face if not needed */
+/*
+@font-face {
+  font-family: "VCR";
+  src: url("/fonts/VCRosdNEUE.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+pre,
+code {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-weight: 100;
+}
+
+::selection {
+  background: #fff;
+  color: #000;
+}
+
+::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+img,
+.no-selection {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.hero-bg {
+  z-index: -1;
+  width: 100vw;
+  word-wrap: break-word;
+  opacity: 0.02;
+  font-size: 3rem;
+  user-select: none;
+}
+.neon {
+  text-shadow:
+    0 0 5px #ff00de,
+    0 0 10px #ff00de;
+}
+
+.neon-pink {
+  text-shadow:
+    0 0 2px #fd79a8,
+    0 0 6px #fd79a8;
+}
+
+.neon-blue {
+  text-shadow:
+    0 0 2px #81ecec,
+    0 0 6px #81ecec;
+}
+
+@keyframes flickerPink {
+  0% {
+    text-shadow: 0 0 1px #fd79a8, 0 0 3px #fd79a8;
+    opacity: 0.8;
+  }
+  10% {
+    text-shadow: 0 0 8px #fd79a8, 0 0 20px #fd79a8;
+    opacity: 1;
+  }
+  20% {
+    text-shadow: 0 0 2px #fd79a8, 0 0 6px #fd79a8;
+    opacity: 0.9;
+  }
+  35% {
+    text-shadow: 0 0 10px #fd79a8, 0 0 25px #fd79a8;
+    opacity: 1;
+  }
+  50% {
+    text-shadow: 0 0 3px #fd79a8, 0 0 8px #fd79a8;
+    opacity: 0.85;
+  }
+  75% {
+    text-shadow: 0 0 12px #fd79a8, 0 0 30px #fd79a8;
+    opacity: 1;
+  }
+  100% {
+    text-shadow: 0 0 1px #fd79a8, 0 0 3px #fd79a8;
+    opacity: 0.8;
+  }
+}
+
+
+@keyframes flickerBlue {
+  0% {
+    text-shadow: 0 0 1px #81ecec, 0 0 3px #81ecec;
+    opacity: 0.8;
+  }
+  10% {
+    text-shadow: 0 0 8px #81ecec, 0 0 20px #81ecec;
+    opacity: 1;
+  }
+  20% {
+    text-shadow: 0 0 2px #81ecec, 0 0 6px #81ecec;
+    opacity: 0.9;
+  }
+  35% {
+    text-shadow: 0 0 10px #81ecec, 0 0 25px #81ecec;
+    opacity: 1;
+  }
+  50% {
+    text-shadow: 0 0 3px #81ecec, 0 0 8px #81ecec;
+    opacity: 0.85;
+  }
+  75% {
+    text-shadow: 0 0 12px #81ecec, 0 0 30px #81ecec;
+    opacity: 1;
+  }
+  100% {
+    text-shadow: 0 0 1px #81ecec, 0 0 3px #81ecec;
+    opacity: 0.8;
+  }
+}
+
+
+.flicker-pink {
+  animation: flickerPink 2.5s infinite;
+}
+
+.flicker-blue {
+  animation: flickerBlue 2.5s infinite;
+}

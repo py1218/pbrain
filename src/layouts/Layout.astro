@@ -1,0 +1,41 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "@/components/BaseHead.astro";
+import Navbar from "@/components/Navbar.astro";
+import Footer from "@/components/Footer.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
+
+const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
+---
+
+<html lang="en" class="!overflow-x-hidden">
+  <head>
+    <BaseHead title={title} description={description} />
+    <meta property="og:title" content="Sexy Unique RPG" />
+    <meta property="og:description" content="Stir up drama, serve cocktails, and survive SUR — all in 16-bit style." />
+    <meta property="og:image" content="/surpgio_background.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://surpg.io" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sexy Unique RPG" />
+    <meta name="twitter:description" content="Stir up drama, serve cocktails, and survive SUR — all in 16-bit style." />
+    <meta name="twitter:image" content="/surpgio_background.png" />
+    <style>
+      body::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="text-white tracking-wide !overflow-x-hidden min-h-screen flex flex-col">
+    <header class="fixed top-0 w-screen z-[9999]"><Navbar /></header>
+    <main class="flex-1 flex flex-col pt-28 md:pt-20">
+      <section class="flex-1 flex flex-col pt-8">
+        <slot />
+      </section>
+    </main>
+    <footer class="w-screen bottom-0 overflow-x-hidden mt-auto"><Footer /></footer>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+---
+import { Image } from "astro:assets";
+import { QUOTE, SITE_TITLE } from "@/consts";
+---
+
+<div
+  class="fixed top-0 -z-10 !w-screen md:block h-screen bg-cover bg-center tracking-wide"
+></div>
+
+<section
+  class="flex-1 w-full !z-[20] relative flex items-start justify-center pt-8 overflow-auto"
+  id="hero"
+>
+  <div class="w-full max-w-5xl px-6 md:px-10 flex flex-col gap-14 text-zinc-800 leading-relaxed">
+
+    <!-- Heading -->
+    <div class="text-center">
+      <h1 class="text-3xl md:text-4xl font-semibold mb-3">Projects</h1>
+      <p class="text-base md:text-lg text-zinc-600">
+        A selection of independent and experimental projects from pbrain studios.
+        Each combines engineering, design, and creativity in unique ways.
+      </p>
+    </div>
+
+    <!-- Featured Project -->
+    <div>
+      <h2 class="text-2xl font-semibold mb-4">Sexy Unique RPG</h2>
+      <div class="rounded-2xl border border-zinc-300 overflow-hidden">
+        <div class="grid md:grid-cols-2">
+          <div class="p-6 flex flex-col justify-center gap-3">
+            <p class="text-zinc-700 text-sm md:text-base">
+              A 16-bit narrative RPG inspired by early reality television. 
+              Players interview with Lisa Vanderpump, strategize to survive
+              a chaotic work environment, and attempt to join exclusive social events.
+            </p>
+            <ul class="text-zinc-600 text-sm space-y-1">
+              <li>• Unity front-end with pixel art styling</li>
+              <li>• Python/FastAPI backend deployed on RunPod</li>
+              <li>• AI-driven dialogue with RAG memory and fine-tuned LLMs</li>
+              <li>• Integrated <strong>Mistral 7B</strong> models for dynamic NPC behavior</li>
+            </ul>
+            <div class="flex gap-3 pt-2">
+              <a href="/play" class="px-4 py-2 rounded-lg bg-black text-white font-medium hover:opacity-90 transition">
+                Play Demo
+              </a>
+              <a href="https://github.com/py1218/lisa-game" class="px-4 py-2 rounded-lg border border-zinc-400 text-sm font-medium hover:border-zinc-600 transition">
+                View Code
+              </a>
+            </div>
+          </div>
+          <div class="relative aspect-video md:aspect-auto md:h-full bg-zinc-100">
+            <img
+              src="/screenshotgame.PNG"
+              alt="Screenshot from Sexy Unique RPG"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other Projects -->
+    <div>
+      <h2 class="text-2xl font-semibold mb-4">Other Projects</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- Recipe Generator -->
+        <div class="rounded-xl border border-zinc-300 p-5 flex flex-col gap-3">
+          <h3 class="text-lg font-semibold">Recipe Generator & Voice Synth</h3>
+          <p class="text-zinc-700 text-sm">
+            A Nara Smith–style recipe generator paired with a custom voice synthesizer.
+            Built with FastAPI and Coqui TTS, deployed on Render.
+          </p>
+        </div>
+
+        <!-- TTS Pipeline -->
+        <div class="rounded-xl border border-zinc-300 p-5 flex flex-col gap-3">
+          <h3 class="text-lg font-semibold">TTS Pipeline Experiments</h3>
+          <p class="text-zinc-700 text-sm">
+            Fine-tuned XTTS-v2 models to create expressive voices for NPC dialogue. 
+            Focus on balancing natural delivery with lightweight deployment.
+          </p>
+        </div>
+
+        <!-- AI Asset Marketplace -->
+        <div class="rounded-xl border border-zinc-300 p-5 flex flex-col gap-3">
+          <h3 class="text-lg font-semibold">AI Asset Marketplace (in progress)</h3>
+          <p class="text-zinc-700 text-sm">
+            An online marketplace where artists can upload their own gaming assets to fine-tune a model. 
+            Developers can then purchase AI-generated assets in the artist’s unique style.
+            Think of it as Etsy for custom AI assets — a way to give artists revenue streams while offering developers high-quality, style-consistent content.
+          </p>
+          <span class="text-sm text-zinc-500">Currently in prototyping phase</span>
+        </div>
+
+        <!-- RAG Dialogue Research -->
+        <div class="rounded-xl border border-zinc-300 p-5 flex flex-col gap-3">
+          <h3 class="text-lg font-semibold">RAG Dialogue Research</h3>
+          <p class="text-zinc-700 text-sm">
+            Experiments with retrieval-augmented generation for interactive characters. 
+            Focused on creating consistent NPC behavior across branching storylines.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+

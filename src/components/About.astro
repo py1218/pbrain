@@ -1,0 +1,94 @@
+---
+import { Image } from "astro:assets";
+import { QUOTE, SITE_TITLE } from "@/consts";
+---
+
+<div
+  class="fixed top-0 -z-10 !w-screen md:block h-screen bg-cover bg-center tracking-wide"
+></div>
+
+<section
+  class="min-h-0 flex-1 !z-[20] relative w-full flex flex-col items-center justify-center pt-8 pb-6 overflow-auto"
+  id="hero"
+>
+  <div class="w-full max-w-4xl px-6 md:px-10 flex flex-col gap-10 text-zinc-800 leading-relaxed">
+
+    <!-- Heading -->
+    <div class="text-center">
+      <h1 class="text-3xl md:text-4xl font-semibold mb-3">About pbrain studios</h1>
+      <p class="text-base md:text-lg text-zinc-600">
+        Independent development studio of Paige Yoo. I build AI-driven games,
+        creative applications, and experimental projects at the intersection of
+        code and storytelling.
+      </p>
+    </div>
+
+    <!-- Studio Bio -->
+    <div class="flex flex-col gap-4 text-base md:text-lg">
+      <p>
+        pbrain studios is both a portfolio and a sandbox for new ideas. My work
+        spans game development, artificial intelligence, and interactive media,
+        from designing 16-bit inspired RPGs with dynamic characters to building
+        production-ready web applications and voice synthesis tools.
+      </p>
+      <p>
+        I approach each project with a focus on technical precision, creative
+        design, and user experience. Whether I am deploying scalable backends,
+        fine-tuning language models, or crafting narrative systems, my goal is to
+        combine engineering with storytelling in ways that feel alive and engaging.
+      </p>
+    </div>
+
+    <!-- Core Focus Areas -->
+    <div>
+      <h2 class="text-xl md:text-2xl font-semibold mb-3">Core Focus Areas</h2>
+      <ul class="grid sm:grid-cols-2 gap-3 text-zinc-700">
+        <li class="border border-zinc-300 rounded-xl p-4">AI-driven dialogue systems</li>
+        <li class="border border-zinc-300 rounded-xl p-4">Game design and Unity development</li>
+        <li class="border border-zinc-300 rounded-xl p-4">Full-stack web applications</li>
+        <li class="border border-zinc-300 rounded-xl p-4">LLM fine-tuning and RAG pipelines</li>
+        <li class="border border-zinc-300 rounded-xl p-4">Speech synthesis and TTS pipelines</li>
+        <li class="border border-zinc-300 rounded-xl p-4">Creative coding and prototyping</li>
+      </ul>
+    </div>
+
+    <!-- Recent / Flagship Project -->
+    <div>
+      <h2 class="text-xl md:text-2xl font-semibold mb-3">Flagship Project</h2>
+      <div class="rounded-2xl border border-zinc-300 overflow-hidden">
+        <div class="grid md:grid-cols-2">
+          <div class="p-6 flex flex-col justify-center gap-3">
+            <h3 class="text-lg md:text-xl font-semibold">Sexy Unique RPG</h3>
+            <p class="text-zinc-700 text-sm md:text-base">
+              A narrative RPG inspired by early 2000s reality television that blends
+              retro aesthetics with cutting-edge AI. It features character memory,
+              emotional tone tracking, and multi-agent dialogue powered by fine-tuned
+              language models. The game uses a Unity front-end with a custom Python and FastAPI backend.
+            </p>
+            <a
+              href="https://surpg.io/about"
+              class="inline-block mt-2 px-4 py-2 rounded-lg border border-zinc-400 text-sm font-medium hover:border-zinc-600 transition"
+            >
+              Learn More
+            </a>
+          </div>
+          <div class="relative aspect-video md:aspect-auto md:h-full bg-zinc-100">
+            <img
+              src="/screenshotgame.PNG"
+              alt="Screenshot from Sexy Unique RPG"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+
+  </div>
+
+</section>
+
+
+
