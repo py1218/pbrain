@@ -1,52 +1,96 @@
 ---
 import { Image } from "astro:assets";
-import { QUOTE, SITE_TITLE } from "@/consts";
+import { SITE_TITLE } from "@/consts";
+// If you have an optimized local image, uncomment and replace the path below:
+// import surpgScreenshot from "@/assets/screenshotgame.png";
 ---
 
 <div class="pt-2">
   <!-- HERO CONTENT -->
   <div class="flex flex-col items-center w-full px-4 flex-1 justify-center text-center gap-6">
-  <h1 class="text-3xl md:text-4xl font-semibold tracking-tight text-[#2d3436]">
-    pbrain studios
-  </h1>
-  <p class="max-w-3xl text-base md:text-lg text-zinc-400">
-    Independent developer building AI‑driven games and creative applications.
-    Portfolio of engineering, research, and interactive projects.
-  </p>  
+    <h1 class="text-3xl md:text-4xl font-semibold tracking-tight text-[#2d3436]">
+      pbrain studios
+    </h1>
+    <p class="max-w-3xl text-base md:text-lg text-zinc-600">
+      Independent developer building AI-driven games and creative applications.
+      Portfolio of engineering, research, and interactive projects.
+    </p>
 
-  <!-- QUICK HIGHLIGHTS -->
-  <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-zinc-400">
-    <span class="px-3 py-1 rounded-full border border-zinc-700">Unity • Python • FastAPI • Supabase • RAG</span>
-    <span class="px-3 py-1 rounded-full border border-zinc-700">AI fine‑tuning • Dialogue systems</span>
-    <span class="px-3 py-1 rounded-full border border-zinc-700">San Francisco, CA</span>
-  </div>
+    <!-- QUICK HIGHLIGHTS -->
+    <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-zinc-600">
+      <span class="px-3 py-1 rounded-full border border-zinc-300">Unity • Python • FastAPI • Supabase • RAG</span>
+      <span class="px-3 py-1 rounded-full border border-zinc-300">AI fine-tuning • Dialogue systems</span>
+      <span class="px-3 py-1 rounded-full border border-zinc-300">San Francisco, CA</span>
+    </div>
+
+    <!-- Primary CTAs -->
+    <div class="flex flex-col sm:flex-row gap-3 mt-2">
+      <a
+        href="/projects"
+        class="px-5 py-3 rounded-xl bg-[#2d3436] text-white font-medium hover:opacity-90 transition"
+        aria-label="View projects by pbrain studios"
+      >
+        View Projects
+      </a>
+      <a
+        href="/about"
+        class="px-5 py-3 rounded-xl border border-zinc-300 text-zinc-800 font-medium hover:border-zinc-500 transition"
+        aria-label="Learn more about pbrain studios"
+      >
+        About the Studio
+      </a>
+    </div>
   </div>
 
   <!-- FEATURED PROJECT -->
   <div class="w-full max-w-5xl mx-auto mt-10 px-4">
-  <div class="rounded-2xl border border-zinc-700 overflow-hidden">
-    <div class="grid md:grid-cols-2">
-      <div class="p-5 md:p-7 flex flex-col gap-4">
-        <h2 class="text-xl md:text-2xl font-semibold">Featured: Sexy Unique RPG</h2>
-        <p class="text-zinc-400 text-sm md:text-base">
-          A 16‑bit, AI‑driven narrative game with LLM‑powered characters, state‑machine story beats,
-          and RAG‑backed memory. Unity front‑end with a Python/FastAPI backend on RunPod.
-        </p>
-        <ul class="text-zinc-400 text-sm space-y-1">
-          <li>• Tech: Unity, Python, FastAPI, Supabase, text‑embedding‑3‑small</li>
-          <li>• Systems: Dialogue orchestration, evaluation scoring, player memory</li>
-        </ul>
-        <div class="flex gap-3 pt-1">
-          <a href="https://surpg.io/play" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg bg-white text-[#2d3436] font-medium hover:opacity-90 transition">Play Demo</a>
+    <div class="rounded-2xl border border-zinc-300 overflow-hidden">
+      <div class="grid md:grid-cols-2">
+        <div class="p-5 md:p-7 flex flex-col gap-4">
+          <h2 class="text-xl md:text-2xl font-semibold text-zinc-800">Featured: Sexy Unique RPG</h2>
+          <p class="text-zinc-600 text-sm md:text-base">
+            A 16-bit, AI-driven narrative game with LLM-powered characters, state-machine story beats,
+            and RAG-backed memory. Unity front-end with a Python/FastAPI backend on RunPod.
+          </p>
+          <ul class="text-zinc-600 text-sm space-y-1">
+            <li>• Tech: Unity, Python, FastAPI, Supabase, Mistral 7B, text-embedding-3-small</li>
+            <li>• Systems: Dialogue orchestration, evaluation scoring, player memory</li>
+          </ul>
+          <div class="flex gap-3 pt-1">
+            <a href="https://surpg.io/play" target="_blank" rel="noopener"
+               class="px-4 py-2 rounded-lg bg-[#2d3436] text-white font-medium hover:opacity-90 transition">Play Demo</a>
+          
+          </div>
         </div>
-      </div>
-      <div class="relative aspect-video md:aspect-auto md:h-full bg-black">
-        <!-- Replace with an actual optimized asset via Astro <Image/> if you have it -->
-        <img src="/screenshotgame.PNG" alt="Sexy Unique RPG screenshot" class="w-full h-full object-cover" loading="eager" />
+        <div class="relative aspect-video md:aspect-auto md:h-full bg-zinc-100">
+          <!-- If you imported an asset above, use:
+          <Image src={surpgScreenshot} alt="Sexy Unique RPG screenshot" class="w-full h-full object-cover" loading="eager" />
+          Otherwise keep the plain <img> below. -->
+          <img src="/screenshotgame.PNG" alt="Sexy Unique RPG screenshot"
+               class="w-full h-full object-cover" loading="eager" />
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- STATS STRIP -->
+  <div class="w-full bg-zinc-50 border-y border-zinc-200 mt-10">
+    <div class="max-w-5xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+      <div>
+        <div class="text-2xl font-semibold text-zinc-800">1,000+</div>
+        <div class="text-sm text-zinc-600">Player sessions</div>
+      </div>
+      <div>
+        <div class="text-2xl font-semibold text-zinc-800">2</div>
+        <div class="text-sm text-zinc-600">Scenes live</div>
+      </div>
+      <div>
+        <div class="text-2xl font-semibold text-zinc-800">Unity • Mistral</div>
+        <div class="text-sm text-zinc-600">Core stack</div>
+      </div>
+    </div>
   </div>
-</div>
 
-
+  <!-- SELECTED PROJECTS -->
+  <div class="w-full max-w-5xl mx-auto mt-10 px-4">
+    <h3 class="text-xl md:text-2xl font-semibold text-zinc-800
