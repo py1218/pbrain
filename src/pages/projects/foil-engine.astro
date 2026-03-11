@@ -1,0 +1,148 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Foil Engine — pbrain studios" description="AI-powered NPC conversation platform. State machines meet language models.">
+
+<div
+  class="fixed top-0 -z-10 !w-screen md:block h-screen bg-cover bg-center tracking-wide"
+></div>
+
+<section
+  class="min-h-0 flex-1 !z-[20] relative w-full flex flex-col items-center justify-center pt-8 pb-10 overflow-auto"
+  id="hero"
+>
+  <div class="w-full max-w-4xl px-6 md:px-10 flex flex-col gap-10 text-zinc-800 leading-relaxed">
+
+    <!-- Header -->
+    <div class="text-center">
+      <h1 class="text-3xl md:text-4xl font-semibold mb-3">Foil Engine</h1>
+      <p class="text-base md:text-lg text-zinc-600">
+        AI-powered NPC conversation platform — state machines meet language models.
+      </p>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="rounded-2xl border border-zinc-300 overflow-hidden">
+      <img
+        src="/foil-engine-editor.png"
+        alt="Foil Engine editor showing state machine diagram and chat preview"
+        class="w-full object-cover"
+        loading="eager"
+      />
+    </div>
+
+    <!-- Overview -->
+    <div class="flex flex-col gap-4 text-base md:text-lg">
+      <p>
+        Foil Engine is a developer platform for building interactive NPCs without scripted
+        dialogue trees. You define character personas and model conversations as state machines.
+        The AI generates natural language responses while following your defined flow — keeping
+        characters in persona across multi-turn conversations.
+      </p>
+      <p>
+        The system separates concerns cleanly: personas define who the character is, scenarios
+        define conversation structure, states define phases, and transitions define the rules
+        that move between them. Each interaction is evaluated by the AI as one of four decisions
+        — pass, redirect, reject, or kick out — creating structured yet dynamic conversations.
+      </p>
+    </div>
+
+    <!-- Key Capabilities -->
+    <div>
+      <h2 class="text-xl md:text-2xl font-semibold mb-3">Key Capabilities</h2>
+      <ul class="grid sm:grid-cols-2 gap-3 text-zinc-700">
+        <li class="border border-zinc-300 rounded-xl p-4">
+          <span class="font-semibold block mb-1">State machine conversations</span>
+          <span class="text-sm text-zinc-600">Structured flows with AI-evaluated transitions, not free-form chat</span>
+        </li>
+        <li class="border border-zinc-300 rounded-xl p-4">
+          <span class="font-semibold block mb-1">RAG-enhanced knowledge</span>
+          <span class="text-sm text-zinc-600">Real-world facts retrieved via Perplexity and filtered through persona context</span>
+        </li>
+        <li class="border border-zinc-300 rounded-xl p-4">
+          <span class="font-semibold block mb-1">Multi-model pipeline</span>
+          <span class="text-sm text-zinc-600">Separate models for evaluation, response generation, and summarization</span>
+        </li>
+        <li class="border border-zinc-300 rounded-xl p-4">
+          <span class="font-semibold block mb-1">Visual editor</span>
+          <span class="text-sm text-zinc-600">Drag-and-drop state machine builder with live chat preview</span>
+        </li>
+        <li class="border border-zinc-300 rounded-xl p-4">
+          <span class="font-semibold block mb-1">Game-ready SDKs</span>
+          <span class="text-sm text-zinc-600">Python, TypeScript, and Unity with full type support and async patterns</span>
+        </li>
+        <li class="border border-zinc-300 rounded-xl p-4">
+          <span class="font-semibold block mb-1">Multi-scenario progression</span>
+          <span class="text-sm text-zinc-600">Linked conversation machines with cross-scenario variable passing</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Tech Stack -->
+    <div>
+      <h2 class="text-xl md:text-2xl font-semibold mb-3">Tech Stack</h2>
+      <div class="grid sm:grid-cols-2 gap-4 text-sm text-zinc-700">
+        <div class="border border-zinc-300 rounded-xl p-4">
+          <span class="font-semibold block mb-2">Frontend</span>
+          <span class="text-zinc-600">Next.js 15, React 19, TypeScript, Tailwind CSS 4, ReactFlow</span>
+        </div>
+        <div class="border border-zinc-300 rounded-xl p-4">
+          <span class="font-semibold block mb-2">Backend</span>
+          <span class="text-zinc-600">Python, FastAPI, SQLAlchemy 2.0, Pydantic</span>
+        </div>
+        <div class="border border-zinc-300 rounded-xl p-4">
+          <span class="font-semibold block mb-2">AI & Knowledge</span>
+          <span class="text-zinc-600">OpenAI GPT-4o, Perplexity sonar-pro (RAG)</span>
+        </div>
+        <div class="border border-zinc-300 rounded-xl p-4">
+          <span class="font-semibold block mb-2">Infrastructure</span>
+          <span class="text-zinc-600">Vercel, Render, Supabase (PostgreSQL, Auth, RLS)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Origin Story -->
+    <div>
+      <h2 class="text-xl md:text-2xl font-semibold mb-3">Origin</h2>
+      <div class="flex flex-col gap-4 text-base md:text-lg">
+        <p>
+          Foil Engine grew out of the dialogue system originally built for
+          <a href="https://surpg.io" target="_blank" rel="noopener" class="underline hover:text-zinc-500 transition">Sexy Unique RPG</a>.
+          After shipping an AI-driven game with custom NPC conversations, I extracted the core
+          engine and rebuilt it as a standalone platform — with a visual editor, REST API, and
+          native SDKs for game developers and educators.
+        </p>
+      </div>
+    </div>
+
+    <!-- CTAs -->
+    <div class="flex flex-col sm:flex-row gap-3 pt-2">
+      <a
+        href="https://foilengine.io"
+        target="_blank"
+        rel="noopener"
+        class="px-5 py-3 rounded-xl bg-[#2d3436] text-white font-medium hover:opacity-90 transition text-center"
+      >
+        Try the Editor
+      </a>
+      <a
+        href="https://foilengine.io/docs"
+        target="_blank"
+        rel="noopener"
+        class="px-5 py-3 rounded-xl border border-zinc-300 text-zinc-800 font-medium hover:border-zinc-500 transition text-center"
+      >
+        View Docs
+      </a>
+      <a
+        href="/projects"
+        class="px-5 py-3 rounded-xl border border-zinc-300 text-zinc-800 font-medium hover:border-zinc-500 transition text-center"
+      >
+        All Projects
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</Layout>
