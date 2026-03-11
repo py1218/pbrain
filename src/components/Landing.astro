@@ -1,8 +1,5 @@
 ---
-import { Image } from "astro:assets";
 import { SITE_TITLE } from "@/consts";
-// If you have an optimized local image, uncomment and replace the path below:
-// import surpgScreenshot from "@/assets/screenshotgame.png";
 ---
 
 <div class="pt-2">
@@ -18,8 +15,8 @@ import { SITE_TITLE } from "@/consts";
 
     <!-- QUICK HIGHLIGHTS -->
     <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-zinc-600">
-      <span class="px-3 py-1 rounded-full border border-zinc-300">Unity • Python • FastAPI • Supabase • RAG</span>
-      <span class="px-3 py-1 rounded-full border border-zinc-300">AI fine-tuning • Dialogue systems</span>
+      <span class="px-3 py-1 rounded-full border border-zinc-300">Python • FastAPI • Next.js • Supabase</span>
+      <span class="px-3 py-1 rounded-full border border-zinc-300">AI dialogue systems • RAG • State machines</span>
       <span class="px-3 py-1 rounded-full border border-zinc-300">San Francisco, CA</span>
     </div>
 
@@ -42,31 +39,31 @@ import { SITE_TITLE } from "@/consts";
     </div>
   </div>
 
-  <!-- FEATURED PROJECT -->
+  <!-- FEATURED PROJECT: FOIL ENGINE -->
   <div class="w-full max-w-5xl mx-auto mt-10 px-4">
     <div class="rounded-2xl border border-zinc-300 overflow-hidden">
       <div class="grid md:grid-cols-2">
         <div class="p-5 md:p-7 flex flex-col gap-4">
-          <h2 class="text-xl md:text-2xl font-semibold text-zinc-800">Featured: Sexy Unique RPG</h2>
+          <h2 class="text-xl md:text-2xl font-semibold text-zinc-800">Featured: Foil Engine</h2>
           <p class="text-zinc-600 text-sm md:text-base">
-            A 16-bit, AI-driven narrative game with LLM-powered characters, state-machine story beats,
-            and RAG-backed memory. Unity front-end with a Python/FastAPI backend on RunPod.
+            An AI-powered platform for building interactive NPCs without scripted dialogue trees.
+            Define character personas and conversation flows as state machines — the AI handles
+            natural language while staying in character.
           </p>
           <ul class="text-zinc-600 text-sm space-y-1">
-            <li>• Tech: Unity, Python, FastAPI, Supabase, Mistral 7B, text-embedding-3-small</li>
-            <li>• Systems: Dialogue orchestration, evaluation scoring, player memory</li>
+            <li>• Tech: Next.js 15, FastAPI, PostgreSQL, GPT-4o, Supabase</li>
+            <li>• Systems: State machine conversations, RAG knowledge, multi-model pipeline</li>
+            <li>• SDKs: Python, TypeScript, Unity</li>
           </ul>
           <div class="flex gap-3 pt-1">
-            <a href="https://surpg.io/play" target="_blank" rel="noopener"
-               class="px-4 py-2 rounded-lg bg-[#2d3436] text-white font-medium hover:opacity-90 transition">Play Demo</a>
-          
+            <a href="https://foilengine.io" target="_blank" rel="noopener"
+               class="px-4 py-2 rounded-lg bg-[#2d3436] text-white font-medium hover:opacity-90 transition">Try the Editor</a>
+            <a href="/projects/foil-engine"
+               class="px-4 py-2 rounded-lg border border-zinc-400 text-sm font-medium text-zinc-800 hover:border-zinc-600 transition">View Details</a>
           </div>
         </div>
         <div class="relative aspect-video md:aspect-auto md:h-full bg-zinc-100">
-          <!-- If you imported an asset above, use:
-          <Image src={surpgScreenshot} alt="Sexy Unique RPG screenshot" class="w-full h-full object-cover" loading="eager" />
-          Otherwise keep the plain <img> below. -->
-          <img src="/screenshotgame.PNG" alt="Sexy Unique RPG screenshot"
+          <img src="/foil-engine.png" alt="Foil Engine — AI-powered NPC conversation platform"
                class="w-full h-full object-cover" loading="eager" />
         </div>
       </div>
@@ -77,20 +74,49 @@ import { SITE_TITLE } from "@/consts";
   <div class="w-full bg-zinc-50 border-y border-zinc-200 mt-10">
     <div class="max-w-5xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
       <div>
-        <div class="text-2xl font-semibold text-zinc-800">1,000+</div>
-        <div class="text-sm text-zinc-600">Player sessions</div>
-      </div>
-      <div>
         <div class="text-2xl font-semibold text-zinc-800">2</div>
-        <div class="text-sm text-zinc-600">Scenes live</div>
+        <div class="text-sm text-zinc-600">Production platforms</div>
       </div>
       <div>
-        <div class="text-2xl font-semibold text-zinc-800">Unity • Mistral</div>
-        <div class="text-sm text-zinc-600">Core stack</div>
+        <div class="text-2xl font-semibold text-zinc-800">3 SDKs</div>
+        <div class="text-sm text-zinc-600">Python, TypeScript, Unity</div>
+      </div>
+      <div>
+        <div class="text-2xl font-semibold text-zinc-800">Full-stack</div>
+        <div class="text-sm text-zinc-600">Frontend, backend, infra</div>
       </div>
     </div>
   </div>
 
   <!-- SELECTED PROJECTS -->
-  <div class="w-full max-w-5xl mx-auto mt-10 px-4">
-    <h3 class="text-xl md:text-2xl font-semibold text-zinc-800
+  <div class="w-full max-w-5xl mx-auto mt-10 px-4 pb-10">
+    <h3 class="text-xl md:text-2xl font-semibold text-zinc-800 mb-6">Selected Projects</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- Sexy Unique RPG -->
+      <a href="/projects" class="rounded-xl border border-zinc-300 p-5 flex flex-col gap-2 hover:border-zinc-500 transition">
+        <h4 class="text-lg font-semibold text-zinc-800">Sexy Unique RPG</h4>
+        <p class="text-zinc-600 text-sm">
+          A 16-bit narrative RPG with AI-driven characters, built on an early version of the Foil Engine dialogue system. Unity + Python/FastAPI.
+        </p>
+      </a>
+
+      <!-- Recipe Generator -->
+      <a href="/projects" class="rounded-xl border border-zinc-300 p-5 flex flex-col gap-2 hover:border-zinc-500 transition">
+        <h4 class="text-lg font-semibold text-zinc-800">Recipe Generator & Voice Synth</h4>
+        <p class="text-zinc-600 text-sm">
+          A Nara Smith-style recipe generator paired with a custom voice synthesizer. FastAPI + Coqui TTS.
+        </p>
+      </a>
+
+      <!-- AI Asset Marketplace -->
+      <a href="/projects" class="rounded-xl border border-zinc-300 p-5 flex flex-col gap-2 hover:border-zinc-500 transition">
+        <h4 class="text-lg font-semibold text-zinc-800">AI Asset Marketplace</h4>
+        <p class="text-zinc-600 text-sm">
+          A marketplace where artists upload gaming assets to fine-tune AI models. Developers purchase generated assets in the artist's style.
+        </p>
+      </a>
+
+    </div>
+  </div>
+</div>

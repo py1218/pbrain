@@ -1,9 +1,9 @@
 export const SITE_TITLE = "pbrain studios";
 export const SITE_DESCRIPTION =
-  `Token Astro + Tailwind CSS starter featuring a sleek black-and-white terminal-inspired design, with support for RSS, sitemap, MD/MDX blog posts static content.`.trim();
+  `Independent developer building AI-driven games, tools, and creative applications. Portfolio of engineering, research, and interactive projects by Paige Yoo.`.trim();
 
 export const KNOWN_TECH =
-  `Astro,Tailwindcss,Svelte,Nextjs,Javascript,Typescript,Python,SCSS,CSS,HTML,HTMX,Astro,Tailwindcss,Svelte,Nextjs,Javascript,Typescript,Python,SCSS,CSS,HTML,HTMX`.split(
+  `Python,TypeScript,JavaScript,Next.js,React,FastAPI,Unity,PostgreSQL,Supabase,Tailwind CSS,Astro,SQLAlchemy,OpenAI,RAG,HTML,CSS`.split(
     ",",
   );
 export const ABOUT_ME =
